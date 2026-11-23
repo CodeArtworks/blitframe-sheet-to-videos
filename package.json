@@ -1,0 +1,25 @@
+{
+  "name": "blitframe-sheet-to-videos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Turn a product sheet into one video per row with the Blitframe API, in a web app or from the command line.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.ts",
+    "cli": "node --env-file-if-exists=.env src/cli.ts",
+    "check": "tsc",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "csv-parse": "7.0.3",
+    "hls.js": "1.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "typescript": "7.0.2"
+  }
+}

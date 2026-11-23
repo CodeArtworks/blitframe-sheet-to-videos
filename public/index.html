@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sheet to videos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bayon&family=Inter:wght@400;500;600;700&family=Fira+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="top">
+    <span class="mark">Juno Optics</span>
+    <div class="top-actions">
+      <button id="change-key" class="button quiet small" type="button" hidden></button>
+      <span class="badge">Blitframe example</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>One sheet.<br>Every product video.</h1>
+    <p>Edit the product feed, press <strong>Render</strong>, and Blitframe turns each row into its own sale video, all in one batch. Each one starts playing as soon as its first seconds are ready.</p>
+  </section>
+
+  <main>
+    <section class="card" aria-labelledby="sheet-title">
+      <div class="card-head">
+        <div>
+          <h2 id="sheet-title">Product sheet</h2>
+          <p id="row-count" class="muted"></p>
+        </div>
+        <div class="actions">
+          <label class="button quiet">
+            Import CSV
+            <input id="csv" type="file" accept=".csv,text/csv" hidden>
+          </label>
+          <button id="add-row" class="button quiet" type="button">Add row</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead id="sheet-head"></thead>
+          <tbody id="sheet-body"></tbody>
+        </table>
+      </div>
+
+      <div class="card-foot">
+        <p id="form-error" class="error" role="alert"></p>
+        <button id="render" class="button primary" type="button">Render</button>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="videos-title">
+      <div class="card-head">
+        <div>
+          <h2 id="videos-title">Videos</h2>
+          <p id="progress-text" class="muted">Rendered videos appear here.</p>
+        </div>
+        <div class="actions">
+          <button id="zip" class="button dark" type="button" hidden>Download all as ZIP</button>
+        </div>
+      </div>
+      <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+      <ol id="videos" class="videos"></ol>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://codeartworks.com/docs/blitframe/editing#many-videos-from-a-data-sheet">Videos from a data sheet</a>
+    <a href="https://codeartworks.com/docs/blitframe/renders#batch-renders">Batch renders</a>
+    <a href="https://codeartworks.com/docs/blitframe/renders#live-hls">Live HLS</a>
+    <a href="https://codeartworks.com/docs/blitframe">Blitframe docs</a>
+  </footer>
+
+  <dialog id="connect" class="connect">
+    <form id="connect-form">
+      <p class="badge">Blitframe example · Sheet to videos</p>
+      <h2>Connect your Blitframe account</h2>
+      <p class="connect-lede">Sheet to videos renders on the Blitframe API with your own key. Paste one here. The free trial is enough.</p>
+      <label class="connect-field">API key
+        <input id="connect-key" type="password" autocomplete="off" spellcheck="false" placeholder="blitframe_…">
+      </label>
+      <p id="connect-error" class="error" role="alert"></p>
+      <div class="connect-actions">
+        <button id="connect-submit" class="button primary" type="submit">Connect</button>
+        <button id="connect-cancel" class="button quiet" type="button" hidden>Cancel</button>
+        <a href="https://app.codeartworks.com/blitframe/api-keys" target="_blank" rel="noreferrer">Create a key in the console</a>
+      </div>
+      <p class="connect-hint">This app's own server checks the key with Blitframe and saves it to <code>.env</code> on this computer, so the next
+        start connects by itself. The page never stores it.</p>
+    </form>
+  </dialog>
+
+  <input id="photo-picker" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+</body>
+</html>

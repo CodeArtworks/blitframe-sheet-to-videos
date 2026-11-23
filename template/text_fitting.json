@@ -1,0 +1,74 @@
+{
+  "layers": [
+    {
+      "nm": "Product name",
+      "textFit": {
+        "shrink": "toFit",
+        "region": {
+          "source": "originalBounds"
+        },
+        "minSize": 10
+      }
+    },
+    {
+      "nm": "Price",
+      "textFit": {
+        "shrink": "toFit",
+        "region": {
+          "source": "originalBounds"
+        },
+        "minSize": 10
+      }
+    },
+    {
+      "nm": "Old price",
+      "textFit": {
+        "shrink": "toFit",
+        "region": {
+          "source": "originalBounds"
+        },
+        "minSize": 10
+      }
+    },
+    {
+      "nm": "Feature",
+      "textFit": {
+        "shrink": "toFit",
+        "region": {
+          "source": "originalBounds"
+        },
+        "minSize": 10
+      }
+    },
+    {
+      "nm": "Deadline",
+      "textFit": {
+        "shrink": "toFit",
+        "region": {
+          "source": "originalBounds"
+        },
+        "minSize": 10
+      }
+    },
+    {
+      "nm": "Call to action",
+      "textFit": {
+        "shrink": "toFit",
+        "region": {
+          "source": "originalBounds"
+        },
+        "minSize": 10
+      }
+    },
+    {
+      "nm": "Brand",
+      "textFit": {
+        "shrink": "toFit",
+        "region": {
+          "source": "originalBounds"
+        },
+        "minSize": 10
+      }
+    }
+  ]
+}
